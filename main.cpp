@@ -16,9 +16,7 @@ int main() {
 	int* ptr_a = &a;
 	int* ptr_b = &b;
 
-	int c = *ptr_a;
-	int d = *ptr_b;
 
-	cout << "*ptr_a = " << c << endl;
-	cout << "*ptr_b = " << d << endl;
+	cout << "*ptr_a = " << *ptr_a << endl;
+	cout << "*ptr_b = " << *ptr_b << endl;
 }

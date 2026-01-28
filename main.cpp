@@ -2,8 +2,10 @@
 
 using namespace std;
 
-int main() {
 
+int derefrencing() {
+
+	//assignment and deferrencing 
 	int a;
 	int b;
 
@@ -17,6 +19,30 @@ int main() {
 	int* ptr_b = &b;
 
 
-	cout << "*ptr_a = " << *ptr_a << endl;
+	cout << "*ptr_a = " << *ptr_a << endl; //*ptr_a derefrences pointer to get value stored
 	cout << "*ptr_b = " << *ptr_b << endl;
+
+	return 0;
+
+}
+
+int maximum() {
+
+	//max in an array
+
+	const int ARR_SIZE = 5;
+	int arr[ARR_SIZE] = { 3, 14, 76, 11, 26 };
+	int* max_ptr = arr;
+	
+	for ()
+	
+
+}
+
+int main() {
+
+	derefrencing();
+
+	maximum();
+	
 }

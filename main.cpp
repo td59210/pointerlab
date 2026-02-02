@@ -54,33 +54,52 @@ int length() {
 
 	char string[] = "computer";
 	char* num_ptr = string;
-	int i = 0;
+	int size = 0;
 
 		while (*num_ptr != '\0') {
 
-			i++;
-
-			num_ptr = &string[i];
+			size++;
+			num_ptr++;
 	}
 		
-		return i;
+		return size;
 }
 
 int reverse() {
 	//print reverse of string
 
 	char string[] = "bottle";
-	char* norm_ptr = string;
-	int i = 0;
+	char* rev_ptr = string;
 
-	while (*norm_ptr != '\0') {
+	while (*rev_ptr != '\0') { //moves pointer to null 
 
-		i++;
-
-		norm_ptr = &string[i];
+		rev_ptr++;
 	}
 	
+	rev_ptr--; //move to last character
 
+	while (rev_ptr >= string) { //comapares to start of array
+
+		cout << "\n" << *rev_ptr;
+
+		rev_ptr--; //pointer moves backwards
+	}
+	
+	cout << "\n";
+	return 0;
+}
+
+int midpoint() {
+
+	vector<int> vec = { 1, 12, 5, 80, 23, 67, 7 };
+	int* start_ptr = &vec[0];
+	int* end_ptr = &vec[vec.size() - 1]; 
+
+	while (start_ptr < end_ptr) { //as long as start is less then end, keep moving
+		start_ptr++;
+		end_ptr--;
+	}
+	return *start_ptr;
 
 }
 
@@ -93,8 +112,11 @@ int main() {
 	cout << "\nMax value is " << maximum() << endl;
 
 	length();
-	cout << "Length of string is " << length() << endl;
+	cout << "\nLength of string is " << length() << endl;
 
 	reverse();
+
+	midpoint();
+	cout << "\nThe midpoint is: " << midpoint() << endl;
 	
 }
